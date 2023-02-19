@@ -47,6 +47,15 @@
             >
           </li>
         </ul>
+        <button
+          class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="mobile-menu-icon" width="32" height="24">
+            <use href="./images/icons.svg#menu-hamburgers"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -57,7 +66,7 @@
           Order Service
         </button>
       </section>
-      <!-- our adventages -->
+      <!-- Our adventages -->
       <section class="section adventages-section">
         <div class="container">
           <h2 class="visually-hidden section-title">adventages</h2>
@@ -113,7 +122,7 @@
           </ul>
         </div>
       </section>
-      <!-- about us -->
+      <!-- About us -->
       <section class="section section-about">
         <div class="container">
           <h2 class="section-title about-title">What Are We Doing</h2>
@@ -145,7 +154,7 @@
           </ul>
         </div>
       </section>
-      <!-- our team  -->
+      <!-- Our team  -->
       <section class="section section-team">
         <div class="container">
           <h2 class="section-title team-title">Our Team</h2>
@@ -633,7 +642,103 @@
         </form>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/body-scroll-lock@4.0.0-beta.0/lib/bodyScrollLock.min.js"></script>
+
+    <!-- Mobile-menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-toggle-close modal-button js-close-menu">
+        <svg class="menu-btn" width="8" height="8">
+          <use href="./images/icons.svg#close"></use>
+        </svg>
+      </button>
+
+      <ul class="list mobile-menu">
+        <li>
+          <a href="./index.html" class="header-link link current">Studio</a>
+        </li>
+        <li>
+          <a href="./portfolio.html" class="header-link link">Portfolio</a>
+        </li>
+        <li>
+          <a href="" class="header-link link">Contacts</a>
+        </li>
+      </ul>
+      <div class="mobile-contacts-wrap">
+        <ul class="mobile-contacts list">
+          <li>
+            <a href="tel:+110001111111" class="mobile-link link current"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+          <li>
+            <a href="mailto:info@devstudio.com" class="email-link link">
+              info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="social-list list mobile-social-list">
+          <li class="social-item">
+            <a
+              class="social-link link"
+              href="https://www.instagram.com"
+              aria-label="instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-item">
+            <a
+              class="social-link link"
+              href="https://twitter.com"
+              aria-label="twitter"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-item">
+            <a
+              class="social-link link"
+              href="https://www.facebook.com"
+              aria-label="facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-item">
+            <a
+              class="social-link link"
+              href="https://www.linkedin.com"
+              aria-label="linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
