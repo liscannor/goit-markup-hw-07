@@ -66,6 +66,16 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.page {
+  overflow: hidden;
+}
+
 /* .section {
   outline: 1px solid tomato;
 } */
@@ -242,14 +252,68 @@ header .logo-text {
   margin: 0px auto;
   padding-top: 112px;
   padding-bottom: 112px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   background-image: linear-gradient(
       var(--shadow-hero-color),
       var(--shadow-hero-color)
     ),
-    url(../images/hero/hero.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+    url(../images/hero/Dark-bg_mobl@1x.jpg);
+}
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero.section {
+    background-image: linear-gradient(
+        var(--shadow-hero-color),
+        var(--shadow-hero-color)
+      ),
+      url(../images/hero/Dark-bg_mobl@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .hero.section {
+    background-image: linear-gradient(
+        var(--shadow-hero-color),
+        var(--shadow-hero-color)
+      ),
+      url(../images/hero/Dark-bg_tabl@1x.jpg);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero.section {
+      background-image: linear-gradient(
+          var(--shadow-hero-color),
+          var(--shadow-hero-color)
+        ),
+        url(../images/hero/Dark-bg_tabl@2x.jpg);
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .hero.section {
+    background-image: linear-gradient(
+        var(--shadow-hero-color),
+        var(--shadow-hero-color)
+      ),
+      url(../images/hero/Dark-bg_desk@1x.jpg);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero.section {
+      background-image: linear-gradient(
+          var(--shadow-hero-color),
+          var(--shadow-hero-color)
+        ),
+        url(../images/hero/Dark-bg_desk@2x.jpg);
+    }
+  }
 }
 
 @media screen and (min-width: 1200px) {
