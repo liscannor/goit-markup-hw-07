@@ -625,7 +625,7 @@ img {
 
 /* filter  */
 
-.list .list-item {
+.list-button .list-item {
   font-family: Roboto;
   font-weight: 500;
   font-size: 16px;
@@ -651,19 +651,56 @@ img {
 }
 
 .section-gallery {
-  padding-top: 96px;
-  padding-bottom: 120px;
+  padding: 48px 16px 24px 16px;
 }
 
-.list-button .list-item {
-  padding: 12px 24px;
+@media screen and (min-width: 768px) {
+  .section-gallery {
+    padding-top: 64px;
+    padding-bottom: 48px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-gallery {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+}
+
+.list-item {
+  display: block;
+  padding: 8px 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .list-item {
+    padding: 12px 24px;
+  }
 }
 
 .list-button {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: start;
   gap: 24px;
-  margin-bottom: 72px;
+  margin-bottom: 48px;
+  width: 284px;
+}
+
+@media screen and (min-width: 768px) {
+  .list-button {
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 64px;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .list-button {
+    margin-bottom: 72px;
+  }
 }
 
 /* portfolio section  */
@@ -687,9 +724,30 @@ img {
   border-top: none;
 }
 
+.list-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
 .gallery-item {
-  flex-basis: calc((100% - (24px * 2)) / 3);
+  width: 100%;
   box-shadow: 0px 1px 6px var(--shadow-item-color);
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery-item {
+    flex-basis: calc((100% - 24px) / 2);
+    margin-bottom: 48px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery-item {
+    flex-basis: calc((100% - (24px * 2)) / 3);
+    margin-bottom: 24px;
+  }
 }
 
 .overlay-text {
@@ -729,12 +787,6 @@ img {
 .gallery-link:focus {
   box-shadow: 0px 2px 1px var(--shadow-item-color),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px var(--shadow-item-color);
-}
-
-.list-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
 }
 
 /* Footer  */
@@ -1203,6 +1255,10 @@ footer .logo-text {
 .mobile-menu .link.current {
   color: var(--accent-second-color);
 }
+.mobile-nav-link:hover,
+.mobile-nav-link:focus {
+  color: var(--accent-color);
+}
 
 .mobile-contacts {
   display: flex;
@@ -1222,6 +1278,14 @@ footer .logo-text {
 }
 
 .mobile-contacts .link.current {
+  color: var(--accent-color);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.11;
+}
+
+.mobile-cont-link:hover,
+.mobile-cont-link:focus {
   color: var(--accent-color);
   font-size: 36px;
   font-weight: 600;
